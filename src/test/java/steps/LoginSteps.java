@@ -99,4 +99,14 @@ public class LoginSteps extends commonMethod {
         }
     }
 
+    @When("user enters different {string} and {string} and verify the {string} for all the combinations")
+    public void user_enters_different_and_and_verify_the_for_all_the_combinations(String userName, String password, String error) {
+        LoginPage loginPage= new LoginPage();
+        sendText(loginPage.userNameBox,userName);
+        sendText(loginPage.passwordBox,password);
+        click(loginPage.loginBtn);
+
+    }
+
+
 }

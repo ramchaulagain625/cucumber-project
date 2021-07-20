@@ -81,6 +81,6 @@ public class commonMethod {
     public static  void teardown(){
         if(driver!=null){
             driver.quit();
-        }
+    }
     }
 }

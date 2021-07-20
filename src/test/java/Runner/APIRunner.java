@@ -6,14 +6,14 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features="src/test/Resources/Features/ApiWorkFlow.feature",
-        glue = "steps",
+        features="src/test/Resources/Features/",
+        glue = "APIWorkflowSteps",
         dryRun = false,
         monochrome = true,
         strict = true,
-        tags=" @dbconnection",
+        tags="@APIWorkflow",
         plugin={"pretty","html:target/cucumber-default-report.html","json:target/cucumber.json","rerun:target/failed.txt"}
 )
-public class TestRunner {
+public class APIRunner {
 
 }

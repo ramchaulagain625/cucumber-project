@@ -1,0 +1,276 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "line": 9,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 5409000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "a JWT is generated",
+            "match": {
+              "location": "APIWorkflowSteps.GenerateTokenSteps.a_JWT_is_generated()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-18T18:40:50.477Z",
+        "line": 14,
+        "name": "Creating an employee",
+        "description": "",
+        "id": "syntax-hrms-api-workflow;creating-an-employee",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "a request isa  prepared to create an employee",
+            "match": {
+              "location": "APIWorkflowSteps.CreatingAnEmployeeSteps.a_request_isa_prepared_to_create_an_employee()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 149000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "a post call is made to create an employee",
+            "match": {
+              "location": "APIWorkflowSteps.CreatingAnEmployeeSteps.a_post_call_is_made_to_create_an_employee()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 94000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the status code for creating an employee is 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 44
+                }
+              ],
+              "location": "APIWorkflowSteps.CreatingAnEmployeeSteps.the_status_code_for_creating_an_employee_is(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: 1 expectation failed.\nJSON path message doesn\u0027t match.\nExpected: Entry created\n  Actual: null\n\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:261)\r\n\tat io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)\r\n\tat org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:212)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:108)\r\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)\r\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)\r\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:298)\r\n\tat io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)\r\n\tat APIWorkflowSteps.CreatingAnEmployeeSteps.the_employee_created_contains_key_and_value(CreatingAnEmployeeSteps.java:45)\r\n\tat ✽.the employee created contains key \"message\" and value \"Entry created\"(file:///D:/com.HRMS/src/test/Resources/Features/ApiWorkFlow.feature:18)\r\n",
+              "duration": 246000000,
+              "status": "failed"
+            },
+            "line": 18,
+            "name": "the employee created contains key \"message\" and value \"Entry created\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"message\"",
+                  "offset": 34
+                },
+                {
+                  "val": "\"Entry created\"",
+                  "offset": 54
+                }
+              ],
+              "location": "APIWorkflowSteps.CreatingAnEmployeeSteps.the_employee_created_contains_key_and_value(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 19,
+            "name": "the employeeID \"employee.employee_ID\" is stored as a global variable to be used for other calls",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"employee.employee_ID\"",
+                  "offset": 15
+                }
+              ],
+              "location": "APIWorkflowSteps.CreatingAnEmployeeSteps.the_employee_id_is_stored_as_a_global_variable_to_be_used_for_other_calls(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@APIWorkflow"
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 214000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "a JWT is generated",
+            "match": {
+              "location": "APIWorkflowSteps.GenerateTokenSteps.a_JWT_is_generated()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-07-18T18:40:56.627Z",
+        "line": 22,
+        "name": "Retreiving created employee",
+        "description": "",
+        "id": "syntax-hrms-api-workflow;retreiving-created-employee",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 21000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "a request is prepared to retrieve the created employee",
+            "match": {
+              "location": "APIWorkflowSteps.CreatingAnEmployeeSteps.a_request_is_prepared_to_retrieve_the_created_employee()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 240000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "a GET call is made to retrieve the created employee",
+            "match": {
+              "location": "APIWorkflowSteps.CreatingAnEmployeeSteps.a_get_call_is_made_to_retrieve_the_created_employee()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: 1 expectation failed.\nExpected status code \u003c200\u003e but was \u003c400\u003e.\n\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)\r\n\tat org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)\r\n\tat org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:493)\r\n\tat io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)\r\n\tat org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)\r\n\tat org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:126)\r\n\tat io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)\r\n\tat io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:134)\r\n\tat io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)\r\n\tat io.restassured.internal.ValidatableResponseImpl.super$2$statusCode(ValidatableResponseImpl.groovy)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)\r\n\tat groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)\r\n\tat groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)\r\n\tat org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)\r\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy:142)\r\n\tat io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)\r\n\tat APIWorkflowSteps.CreatingAnEmployeeSteps.the_status_code_for_retrieving_the_created_employee_is(CreatingAnEmployeeSteps.java:76)\r\n\tat ✽.the status code for retrieving the created employee is 200(file:///D:/com.HRMS/src/test/Resources/Features/ApiWorkFlow.feature:25)\r\n",
+              "duration": 7000000,
+              "status": "failed"
+            },
+            "line": 25,
+            "name": "the status code for retrieving the created employee is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 55
+                }
+              ],
+              "location": "APIWorkflowSteps.CreatingAnEmployeeSteps.the_status_code_for_retrieving_the_created_employee_is(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "the retrieved employee ID \"\" matches the globally stored employee ID",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 26
+                }
+              ],
+              "location": "APIWorkflowSteps.CreatingAnEmployeeSteps.the_retrieved_employee_id_matches_the_globally_stored_employee_id(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 27,
+            "name": "the retrieved data at \"\" matches the data used to create an empoloyee with employee ID \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"\"",
+                  "offset": 87
+                }
+              ],
+              "location": "APIWorkflowSteps.CreatingAnEmployeeSteps.the_retrieved_data_at_matches_the_data_used_to_create_an_empoloyee_with_employee_id(java.lang.String,java.lang.String,io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "employee_id",
+                  "emp_firstname",
+                  "emp_middle_name",
+                  "emp_lastname",
+                  "emp_birthday",
+                  "emp_job_title",
+                  "emp_status"
+                ]
+              },
+              {
+                "cells": [
+                  "23163A",
+                  "Ram",
+                  "ram",
+                  "ram",
+                  "2093-07-10",
+                  "Automation Tester",
+                  "Full Time"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@APIWorkflow"
+          }
+        ]
+      }
+    ],
+    "name": "Syntax HRMS API Workflow",
+    "description": "  Description: This feature files tests Syntax HRMS API Workflow",
+    "id": "syntax-hrms-api-workflow",
+    "keyword": "Feature",
+    "uri": "file:src/test/Resources/Features/ApiWorkFlow.feature",
+    "tags": []
+  }
+]

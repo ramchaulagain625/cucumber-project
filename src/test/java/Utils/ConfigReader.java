@@ -7,6 +7,7 @@ import java.util.Properties;
 
 public class ConfigReader {
     String path=System.getProperty("user.dir");
+
     static Properties prop;
     public static Properties readProperties(String filePath){
         try {

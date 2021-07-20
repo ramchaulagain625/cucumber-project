@@ -4,15 +4,14 @@ package steps;
 
 import Pages.AddEmployeePage;
 import Pages.DashBoardPage;
-import Utils.Constants;
-import Utils.ExcelReading;
-import Utils.commonMethod;
+import Utils.*;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import Pages.AddEmployeePage;
 import Pages.DashBoardPage;
 import Utils.commonMethod;
+import org.junit.Assert;
 
 import java.util.Iterator;
 import java.util.List;
@@ -45,6 +44,10 @@ public class AddEmployeeSteps extends commonMethod {
         sendText(add.firstName, firstName);
         sendText(add.middleName, middleName);
         sendText(add.lastName, lastName);
+        GlobalVariable.firstName=firstName;
+        GlobalVariable.middleName=middleName;
+        GlobalVariable.lastName=lastName;
+
     }
 
     @When("user enters {string} {string} and {string} in the application")
@@ -103,5 +106,39 @@ public class AddEmployeeSteps extends commonMethod {
 }
 
 }
+
+
+
+
+
+    @When("capture the employeeId")
+    public void capture_the_employee_id() {
+       AddEmployeePage add= new AddEmployeePage();
+       GlobalVariable.empId=add.employeeId.getAttribute("value");
+
+    }
+
+    @Then("verify the data from frontend and backend")
+    public void verify_the_data_from_frontend_and_backend() {
+        System.out.println("Backend testing");
+        System.out.println("Dbfirstname "+GlobalVariable.dbFirstName);
+        System.out.println("Dbmiddlename "+GlobalVariable.dbMiddleName);
+        System.out.println("Dblastname "+GlobalVariable.dbLastName);
+        System.out.println("frontEnd testing");
+        System.out.println("FirstName "+GlobalVariable.firstName);
+        System.out.println("MiddleName "+GlobalVariable.middleName);
+        System.out.println("LastName "+GlobalVariable.lastName);
+
+        Assert.assertEquals("First Name doesNot match",GlobalVariable.firstName,GlobalVariable.dbFirstName);
+        Assert.assertEquals("middle Name doesNot match",GlobalVariable.middleName,GlobalVariable.dbMiddleName);
+        Assert.assertEquals("Last Name doesNot match",GlobalVariable.lastName,GlobalVariable.dbLastName);
+
+
+
+    }
+
+
+
+
 }
 
