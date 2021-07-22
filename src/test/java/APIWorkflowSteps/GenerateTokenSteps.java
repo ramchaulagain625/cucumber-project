@@ -13,11 +13,11 @@ public class GenerateTokenSteps {
     public void a_JWT_is_generated() {
         RequestSpecification generateTokenRequest =given().header("Content-type", "application/json")
                 .body("{\n" +
-                        "    \"email\":\"anushamail@gmail.com\",\n" +
-                        "    \"password\":\"postmanwilldelivermail\"\n" +
+                        "    \"email\":\"ramchaulagain@gmail.com\",\n" +
+                        "    \"password\":\"Abunfgtrek12541)(\"\n" +
                         "}");
         Response generateTokenResponse = generateTokenRequest.when().post(apiConstants.GENERATE_TOKEN_URI);
-        generateTokenResponse.prettyPrint();
+        //generateTokenResponse.prettyPrint();
         token="Bearer "+generateTokenResponse.jsonPath().getString("token");
     }
 }
