@@ -1,4 +1,5 @@
 package APIWorkflowSteps;
+import Utils.APICommonMethods;
 import Utils.ApiPayloadConstant;
 import Utils.apiConstants;
 import io.cucumber.datatable.DataTable;
@@ -22,8 +23,7 @@ public class CreatingAnEmployeeSteps {
 
     @Given("a request isa  prepared to create an employee")
     public void a_request_isa_prepared_to_create_an_employee() {
-       request = given().header(apiConstants.Header_Content_type,apiConstants.Content_type)
-                .header(apiConstants.Header_Authorization,GenerateTokenSteps.token).body(ApiPayloadConstant.createEmployeePayload());
+        APICommonMethods.createEmployeeRequest(ApiPayloadConstant.createEmployeeBody());
     }
 
     @When("a post call is made to create an employee")
@@ -58,6 +58,7 @@ public class CreatingAnEmployeeSteps {
 
     @Given("a request is prepared to retrieve the created employee")
     public void a_request_is_prepared_to_retrieve_the_created_employee() {
+
      request=  given().header(apiConstants.Header_Content_type,apiConstants.Content_type)
                 .header(apiConstants.Header_Authorization,GenerateTokenSteps.token)
                 .queryParam("employee_id",employee_id).log().all();

@@ -1,5 +1,5 @@
 Feature: Edit the employee from table
-   @homework
+
    Scenario: select the employee from employee table and edit the employee list
     And user is logged in with valid admin credentials
     When user clicks on PIM option

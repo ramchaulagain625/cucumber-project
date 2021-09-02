@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         dryRun = false,
         monochrome = true,
         strict = true,
-        tags=" @smoke",
+        tags="",
         plugin={"pretty","html:target/cucumber-default-report.html","json:target/cucumber.json","rerun:target/failed.txt"}
 )
 public class TestRunner {

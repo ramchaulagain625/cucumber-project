@@ -14,8 +14,8 @@ ConfigReader.readProperties(Constants.CONFIGURATION_FILEPATH);
     try {
         connection=  DriverManager.getConnection(ConfigReader.getPropertyValue("dbUrl"),
                   ConfigReader.getPropertyValue("dbUserName"),ConfigReader.getPropertyValue("dbPassword"));
-    } catch (SQLException throwables) {
-        throwables.printStackTrace();
+    } catch (SQLException throwable) {
+        throwable.printStackTrace();
     }
 
     return connection;
@@ -27,8 +27,8 @@ public static ResultSet getResultSet(String query){
     try {
         statement = connection.createStatement();
         resultSet=statement.executeQuery(query);
-    } catch (SQLException throwables) {
-        throwables.printStackTrace();
+    } catch (SQLException throwable) {
+        throwable.printStackTrace();
     }
    return resultSet;
 }
@@ -47,8 +47,8 @@ public static List<Map<String,String>> getTableDataAsList(String query){
            tableList.add(rowMap);
        }
 
-    } catch (SQLException throwables) {
-        throwables.printStackTrace();
+    } catch (SQLException throwable) {
+        throwable.printStackTrace();
     }
     return tableList;
 }

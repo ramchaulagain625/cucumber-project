@@ -50,6 +50,7 @@ public class commonMethod {
         driver.get(ConfigReader.getPropertyValue("url"));
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT, TimeUnit.SECONDS);
+
     }
    public static void sendText(WebElement element,String text){
         //element.clear();
